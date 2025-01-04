@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سیستم مدیریت دانشجویان</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- اضافه کردن فونت Vazir -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazir&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>سیستم مدیریت دانشجویان</h1>
+        </header>
+
+        <!-- فرم وارد کردن دانش‌آموز -->
+        <form id="student-form">
+            <label for="first-name">نام:</label>
+            <input type="text" id="first-name" required>
+
+            <label for="last-name">نام خانوادگی:</label>
+            <input type="text" id="last-name" required>
+
+            <label for="grade">نمره:</label>
+            <input type="number" id="grade" required>
+
+            <label for="student-id">شماره دانشجویی:</label>
+            <input type="number" id="student-id" required>
+
+            <button type="submit">اضافه کردن دانش‌آموز</button>
+        </form>
+
+        <!-- جستجو -->
+        <input type="text" id="search" placeholder="جستجو🔍" onkeyup="searchStudents()">
+
+        <!-- گزارش آمار -->
+        <div id="stats">
+            <p id="student-count">تعداد دانش‌آموزان: 0</p>
+            <p id="average-grade">میانگین نمرات: 0</p>
+            <p id="high-grade-students">دانش‌آموزان با نمره بالا (15 به بالا): 0</p>
+        </div>
+
+        <!-- نمایش لیست دانش‌آموزان -->
+        <ul id="student-list" class="student-list"></ul>
+
+        <!-- صفحه بندی -->
+        <div id="pagination"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

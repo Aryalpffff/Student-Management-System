@@ -1,0 +1,214 @@
+/* استفاده از فونت Vazir */
+*,
+*::before,
+*::after {
+    font-family: 'Vazir', sans-serif !important;
+    /* اعمال فونت Vazir به تمام المان‌ها */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f3f9fc;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+    direction: rtl;
+    /* راست‌چین کردن کل صفحه */
+}
+
+/* استایل‌های عمومی */
+.container {
+    width: 60%;
+    /* کاهش عرض به 60% */
+    max-width: 1200px;
+    /* محدود کردن به حداکثر عرض 1200px */
+    margin: 0 auto;
+    padding: 20px 30px;
+    /* کاهش پدینگ داخلی */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* سرصفحه */
+header h1 {
+    text-align: center;
+    font-size: 24px;
+    /* کاهش اندازه فونت */
+    color: #2a5d8c;
+    margin-bottom: 20px;
+    /* کاهش فاصله پایین */
+}
+
+/* فرم وارد کردن اطلاعات */
+form {
+    margin-bottom: 20px;
+    /* کاهش فاصله پایین فرم */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    /* کاهش فاصله پایین label */
+    font-weight: bold;
+    color: #2a5d8c;
+}
+
+input[type="text"],
+input[type="number"],
+#search {
+    width: 100%;
+    padding: 10px;
+    /* کاهش padding */
+    margin-bottom: 15px;
+    /* کاهش فاصله پایین ورودی‌ها */
+    border: 2px solid #d1e7ff;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f1f9fc;
+    color: #333;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder {
+    color: #aaa;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1e73d2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1668b2;
+}
+
+/* استایل جستجو */
+#search {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #d1e7ff;
+    font-size: 16px;
+}
+
+/* گزارش آمار */
+#stats {
+    margin-bottom: 20px;
+    /* کاهش فاصله پایین آمار */
+    font-size: 16px;
+    /* کاهش اندازه فونت */
+}
+
+#stats p {
+    color: #2a5d8c;
+    margin: 8px 0;
+    /* کاهش فاصله پایین هر آمار */
+}
+
+/* لیست دانش‌آموزان */
+#student-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.student-item {
+    padding: 10px;
+    /* کاهش padding */
+    margin-bottom: 10px;
+    border: 1px solid #d1e7ff;
+    border-radius: 8px;
+    background-color: #f9fafc;
+    transition: background-color 0.3s ease;
+}
+
+.student-item:hover {
+    background-color: #eaf4fc;
+}
+
+.student-item p {
+    margin: 5px 0;
+}
+
+/* استایل نمرات کمتر از 10 */
+.student-item .grade-low {
+    color: red;
+    font-weight: bold;
+    position: relative;
+}
+
+.student-item .grade-low::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: red;
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+/* دکمه‌ها (ویرایش و حذف) */
+button.edit-btn,
+button.delete-btn {
+    padding: 8px 12px;
+    margin-right: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+button.edit-btn:hover {
+    background-color: #45a049;
+}
+
+button.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+}
+
+button.delete-btn:hover {
+    background-color: #e53935;
+}
+
+/* صفحه‌بندی */
+#pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pagination button {
+    background-color: #d1e7ff;
+    color: #2a5d8c;
+    border: none;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#pagination button:hover {
+    background-color: #b3d8f7;
+}
+
+#pagination button:focus {
+    outline: none;
+}
